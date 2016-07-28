@@ -4,7 +4,7 @@ RUN mkdir -p /dotnet-app
 RUN mkdir -p /compiled-app
 
 WORKDIR /dotnet-app
-COPY . /dotnet-app
+COPY ./src /dotnet-app
 RUN dotnet restore
 RUN dotnet publish -c Release -o /compiled-app
 

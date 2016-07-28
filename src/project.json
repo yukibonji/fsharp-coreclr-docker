@@ -10,7 +10,12 @@
         }
     },
     "dependencies": {
-        "Microsoft.FSharp.Core.netcore": "1.0.0-alpha-160727"
+        "Microsoft.NETCore.App": {
+            "type": "platform",
+            "version": "1.0.0"
+        },
+        "Microsoft.FSharp.Core.netcore": "1.0.0-alpha-160727",
+        "Microsoft.AspNetCore.Server.Kestrel": "1.0.0"
     },
     "tools": {
         "dotnet-compile-fsc": {
@@ -24,12 +29,6 @@
     },
     "frameworks": {
         "netcoreapp1.0": {
-            "dependencies": {
-                "Microsoft.NETCore.App": {
-                    "type": "platform",
-                    "version": "1.0.0"
-                }
-            },
             "imports": [
                 "portable-net45+win8",
                 "dnxcore50"
