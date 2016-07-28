@@ -5,3 +5,9 @@ build.cmd
 publish.cmd
 run.cmd
 ```
+
+Or
+
+```
+all.cmd Hello
+```
