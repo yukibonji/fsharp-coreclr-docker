@@ -1,0 +1,11 @@
+FROM microsoft/dotnet:1.0.0-preview2-sdk
+
+RUN mkdir -p /dotnet-app
+RUN mkdir -p /compiled-app
+
+WORKDIR /dotnet-app
+COPY . /dotnet-app
+RUN dotnet restore
+RUN dotnet publish -c Release -o /compiled-app
+
+WORKDIR /
